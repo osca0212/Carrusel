@@ -1,0 +1,188 @@
+{
+  "api": "Oportunidades Academicas UACJ",
+  "version": "1.0",
+  "descripcion": "API para gestionar oportunidades de estudio en universidades y community colleges en el extranjero para estudiantes de la UACJ",
+
+  "universidades": [
+    {
+      "id": 1,
+      "nombre": "University of Texas at El Paso",
+      "siglas": "UTEP",
+      "pais": "Estados Unidos",
+      "ciudad": "El Paso, Texas",
+      "tipo": "Universidad",
+      "modalidad": ["Presencial", "Intercambio"],
+      "programas": [
+        {
+          "id_programa": 101,
+          "nombre": "Ingenieria en Sistemas",
+          "area": "Tecnologia",
+          "duracion": "4 años",
+          "idioma": "Ingles",
+          "costo_aproximado_usd": 20000
+        },
+        {
+          "id_programa": 102,
+          "nombre": "Administracion de Empresas",
+          "area": "Negocios",
+          "duracion": "4 años",
+          "idioma": "Ingles",
+          "costo_aproximado_usd": 18000
+        }
+      ],
+      "becas": [
+        {
+          "id_beca": 201,
+          "nombre": "Beca Movilidad UACJ",
+          "tipo": "Parcial",
+          "porcentaje": 50,
+          "requisitos": [
+            "Promedio minimo de 8.5",
+            "Nivel de ingles B2",
+            "Ser estudiante activo UACJ"
+          ]
+        }
+      ],
+      "intercambio": {
+        "disponible": true,
+        "duracion": ["6 meses", "1 año"],
+        "convenio_uacj": true
+      }
+    },
+
+    {
+      "id": 2,
+      "nombre": "New Mexico State University",
+      "siglas": "NMSU",
+      "pais": "Estados Unidos",
+      "ciudad": "Las Cruces, New Mexico",
+      "tipo": "Universidad",
+      "modalidad": ["Presencial"],
+      "programas": [
+        {
+          "id_programa": 103,
+          "nombre": "Ingenieria Mecanica",
+          "area": "Ingenieria",
+          "duracion": "4 años",
+          "idioma": "Ingles",
+          "costo_aproximado_usd": 19000
+        }
+      ],
+      "becas": [
+        {
+          "id_beca": 202,
+          "nombre": "Beca Internacional",
+          "tipo": "Parcial",
+          "porcentaje": 40,
+          "requisitos": [
+            "Promedio minimo de 8.0",
+            "Certificado de ingles"
+          ]
+        }
+      ],
+      "intercambio": {
+        "disponible": true,
+        "duracion": ["1 año"],
+        "convenio_uacj": true
+      }
+    },
+
+    {
+      "id": 3,
+      "nombre": "Community College of Denver",
+      "siglas": "CCD",
+      "pais": "Estados Unidos",
+      "ciudad": "Denver, Colorado",
+      "tipo": "Community College",
+      "modalidad": ["Presencial"],
+      "programas": [
+        {
+          "id_programa": 104,
+          "nombre": "Associate Degree en Ciencias",
+          "area": "Ciencias",
+          "duracion": "2 años",
+          "idioma": "Ingles",
+          "costo_aproximado_usd": 9000
+        },
+        {
+          "id_programa": 105,
+          "nombre": "Tecnologia de la Informacion",
+          "area": "Tecnologia",
+          "duracion": "2 años",
+          "idioma": "Ingles",
+          "costo_aproximado_usd": 8500
+        }
+      ],
+      "becas": [
+        {
+          "id_beca": 203,
+          "nombre": "Beca Community College",
+          "tipo": "Parcial",
+          "porcentaje": 30,
+          "requisitos": [
+            "Promedio minimo de 8.0"
+          ]
+        }
+      ],
+      "intercambio": {
+        "disponible": true,
+        "duracion": ["1 año"],
+        "convenio_uacj": true
+      }
+    }
+  ],
+
+  "becas_generales": [
+    {
+      "id": 301,
+      "nombre": "Beca Santander Internacional",
+      "tipo": "Parcial",
+      "beneficio": "Apoyo economico para movilidad",
+      "monto_usd": 1000
+    },
+    {
+      "id": 302,
+      "nombre": "Beca SEP Movilidad",
+      "tipo": "Completa",
+      "beneficio": "Cubre estudios y manutencion",
+      "monto_usd": 5000
+    }
+  ],
+
+  "requisitos_generales": {
+    "documentos": [
+      "Pasaporte vigente",
+      "Visa de estudiante",
+      "Certificado de idioma (TOEFL o IELTS)",
+      "Historial academico",
+      "Carta de motivos"
+    ],
+    "promedio_minimo": 8.0,
+    "nivel_ingles_minimo": "B1/B2"
+  },
+
+  "estudiantes": [
+    {
+      "id": 401,
+      "nombre": "Oscar Alejandro Martinez",
+      "edad": 23,
+      "universidad_origen": "UACJ",
+      "carrera": "Ingenieria en Sistemas",
+      "promedio": 8.7,
+      "nivel_ingles": "B2",
+      "universidad_destino_id": 1,
+      "estatus": "Aceptado"
+    },
+    {
+      "id": 402,
+      "nombre": "Maria Lopez",
+      "edad": 22,
+      "universidad_origen": "UACJ",
+      "carrera": "Administracion",
+      "promedio": 8.3,
+      "nivel_ingles": "B1",
+      "universidad_destino_id": 3,
+      "estatus": "En proceso"
+    }
+  ]
+}
