@@ -24,15 +24,8 @@ function anteriorSlide() {
     actualizarCarrusel();
 }
 
-btnSig.addEventListener('click', () => {
-    siguienteSlide();
-    reiniciarIntervalo();
-});
-
-btnAnt.addEventListener('click', () => {
-    anteriorSlide();
-    reiniciarIntervalo();
-});
+if (btnSig) btnSig.addEventListener('click', () => { siguienteSlide(); reiniciarIntervalo(); });
+if (btnAnt) btnAnt.addEventListener('click', () => { anteriorSlide(); reiniciarIntervalo(); });
 
 puntos.forEach((punto, i) => {
     punto.addEventListener('click', () => {
@@ -49,25 +42,25 @@ function reiniciarIntervalo() {
     intervalo = setInterval(siguienteSlide, 4000);
 }
 
-// --- LÓGICA DEL MODAL DE LOGIN ---
 const modal = document.getElementById("modalLogin");
 const btnAbrir = document.querySelector(".btn-login");
 const btnCerrar = document.querySelector(".cerrar-modal");
 
-// Abrir al hacer clic en 'login'
-btnAbrir.addEventListener("click", (e) => {
-    e.preventDefault(); // Evita que recargue la página
-    modal.style.display = "block";
-});
-
-// Cerrar en la 'X'
-btnCerrar.onclick = function() {
-    modal.style.display = "none";
+if (btnAbrir) {
+    btnAbrir.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "flex"; e
+    });
 }
 
-// Cerrar si hacen clic fuera de la ventana blanca
-window.onclick = function(event) {
-    if (event.target == modal) {
+if (btnCerrar) {
+    btnCerrar.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+}
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
-}
+});
