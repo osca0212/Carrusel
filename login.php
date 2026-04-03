@@ -12,15 +12,22 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $conn->real_escape_string($_POST['usuario']);
-    $pass = $conn->real_escape_string($_POST['password']);
+    $pass = $_POST['password']; 
 
-    $sql = "SELECT * FROM usuarios WHERE email = '$user' AND password = '$pass'";
+    $sql = "SELECT * FROM usuarios WHERE email = '$user'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<script>alert('¡Bienvenido!'); window.location.href='index.html';</script>";
+        $usuario_datos = $result->fetch_assoc();
+        
+ 
+        if (password_verify($pass, $usuario_datos['password']) || $pass == $usuario_datos['password']) {
+            echo "<script>alert('¡Bienvenido!'); window.location.href='inicio_privado.php';</script>";
+        } else {
+            echo "<script>alert('Contraseña incorrecta'); window.location.href='index.html';</script>";
+        }
     } else {
-        echo "<script>alert('Usuario o contraseña incorrectos'); window.location.href='index.html';</script>";
+        echo "<script>alert('El correo no está registrado'); window.location.href='index.html';</script>";
     }
 }
 
