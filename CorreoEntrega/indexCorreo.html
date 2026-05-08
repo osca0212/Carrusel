@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Community Collage</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Librería EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="pagina-privada">
+
+    <header>
+        <div class="logo-area">
+            <h1><a href="../index.html">COMMUNITY COLLAGE</a></h1>
+            <p>OPORTUNIDADES DE ESTUDIO</p>
+        </div>
+        <nav class="nav-principal">
+            <ul class="frases-nav">
+                <li>"Tu futuro comienza aquí"</li>
+                <li>"Excelencia académica"</li>
+                <li>"Comunidad y éxito"</li>
+            </ul>
+        </nav>
+        <div class="usuario-area">
+            <span class="icon-graduacion">🎓</span>
+        </div>
+    </header>
+
+    <main class="contenedor-contacto">
+        <div class="container">
+            <form id="contact_form">
+                <h2>Contáctanos</h2>
+                <p>Envía tus dudas o solicita información a nuestro equipo académico</p>
+
+                <input type="text" id="user_name" name="name" placeholder="Tu Nombre Completo" required>
+                <input type="email" id="user_email" name="email" placeholder="Tu Correo Institucional" required>
+
+                <select name="asunto" id="asunto">
+                    <option value="admisiones">Información de Admisiones</option>
+                    <option value="requisitos">Dudas sobre Requisitos</option>
+                    <option value="testimonios">Compartir mi Testimonio</option>
+                    <option value="otro">Otro Asunto</option>
+                </select>
+
+                <textarea name="message" id="message" placeholder="Escribe tu mensaje detalladamente aquí..." required></textarea>
+
+                <button type="submit" id="button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer-redes">
+        <div class="contenedor-footer">
+            <p class="frase-community">"Forjando el camino hacia el éxito académico y profesional."</p>
+            <p class="copy-footer">© 2026 Community College</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

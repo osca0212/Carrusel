@@ -1,8 +1,4 @@
-/* ===================================
-   ESTILOS PARA PÁGINAS INTERNAS
-   (Sin carrusel - páginas privadas)
-   =================================== */
-
+/* ===== VARIABLES Y RESET ===== */
 :root {
     --color-primario: #003366;
     --color-secundario: #d4af37;
@@ -42,11 +38,10 @@ header {
     flex-shrink: 0;
 }
 
-.logo-area h1 {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
+.logo-area h1 a {
+    text-decoration: none;
+    color: inherit;
 }
-
 .logo-area p {
     font-size: 0.75rem;
     opacity: 0.8;
@@ -89,24 +84,27 @@ header {
     font-size: 1.5rem;
 }
 
+/* ✨ ESTILO UNIFICADO BOTÓN AUTH */
 .auth-links a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255,255,255,0.7);
     font-size: 0.85rem;
-    padding: 8px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .auth-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--color-secundario);
+    background: white;
+    color: #003366; /* Color azul del index */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
-
 /* ===== MAIN CONTENT ===== */
 main.contenedor-maquetado {
-    flex: 1;
+    flex: 1; /* Esto empuja el footer hacia abajo */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -150,35 +148,31 @@ main.contenedor-maquetado {
     font-style: italic;
 }
 
-/* Tarjeta de información */
-.info-texto h3 {
+/* Información */
+.info-texto h3,
+.soporte h3,
+.info-requisitos h2 {
     color: var(--color-primario);
     margin-bottom: 15px;
-    font-size: 1.2rem;
+}
+
+.info-texto h3,
+.info-requisitos h2 {
     border-bottom: 2px solid var(--color-secundario);
     padding-bottom: 8px;
 }
 
-.info-texto p {
+.info-texto p,
+.info-contacto p,
+.info-requisitos p {
     color: var(--color-texto);
     line-height: 1.7;
     font-size: 0.95rem;
 }
 
-/* Tarjeta de soporte/contacto */
-.soporte h3 {
-    color: var(--color-primario);
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
+/* Contacto */
 .info-contacto {
     line-height: 1.8;
-}
-
-.info-contacto p {
-    color: var(--color-texto);
-    font-size: 0.95rem;
 }
 
 .info-contacto a {
@@ -192,7 +186,7 @@ main.contenedor-maquetado {
     text-decoration: underline;
 }
 
-/* Tarjeta del mapa */
+/* Mapa */
 .mapa-contenedor {
     padding: 15px;
 }
@@ -206,75 +200,79 @@ main.contenedor-maquetado {
 
 .mapa-contenedor iframe {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 100%;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background-color: var(--color-primario);
+/* ================= FOOTER ================= */
+.footer-redes {
+    background: #001a33;
     color: white;
-    padding: 15px 0;
     text-align: center;
-    border-top: 3px solid var(--color-secundario);
-    flex-shrink: 0;
+    padding: 25px 15px;
+    margin-top: 30px;
 }
 
-.frase-community {
-    font-size: 0.9rem;
-    font-style: italic;
-    margin-bottom: 10px;
-    opacity: 0.9;
+.footer-redes h4 {
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+    font-size: 1.1rem;
 }
 
 .redes-sociales {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    margin-bottom: 15px;
 }
 
-.redes-sociales a {
-    transition: transform 0.3s ease;
+.redes-sociales a img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.redes-sociales a:hover {
-    transform: scale(1.2);
+.redes-sociales a img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.5);
 }
 
-.redes-sociales img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1);
+.footer-redes p {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
     main.contenedor-maquetado {
         grid-template-columns: 1fr;
-        padding: 20px 3%;
+        padding: 35px 5%;
     }
-    
-    header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .nav-principal ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .img-uni {
-        height: 200px;
+
+    .tarjeta-mini {
+        width: 48%;
     }
 }
 
 @media (max-width: 600px) {
-    .nav-principal a {
-        padding: 8px 10px;
-        font-size: 0.8rem;
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
     }
-    
+
+    .nav-principal ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-mini {
+        width: 100%;
+    }
+
     .logo-area h1 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 }

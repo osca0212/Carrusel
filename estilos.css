@@ -5,16 +5,16 @@
 }
 
 html, body {
-    height: 100vh; 
+    height: 100vh;
     width: 100%;
 }
 
 body {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-family: 'Segoe UI', sans-serif;
     background-color: #003366;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 header {
@@ -25,25 +25,51 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
-.logo-area h1 { font-size: 1.5rem; }
+.logo-area h1 a{ 
+        font-size: 1.5rem; 
+        text-decoration: none;
+        color: inherit;
+}
 .logo-area p { font-size: 0.75rem; opacity: 0.8; }
 
 .nav-principal ul { display: flex; gap: 10px; list-style: none; }
-.nav-principal a { 
-    color: white; text-decoration: none; padding: 8px 12px; 
+.nav-principal a {
+    color: white; text-decoration: none; padding: 8px 12px;
     transition: 0.3s; border-radius: 4px; font-size: 0.9rem;
 }
 .nav-principal a:hover { background: #d4af37; color: #003366; }
 
-.usuario-area { display: flex; align-items: center; gap: 15px; }
-.auth-links a { color: white; text-decoration: none; font-size: 0.85rem; }
+.usuario-area { 
+        display: flex; 
+        align-items: center; 
+        gap: 15px; 
+}
 
+
+/* ✨ ESTILO UNIFICADO BOTÓN AUTH */
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.auth-links a:hover {
+    background: white;
+    color: #003366; /* Color azul del index */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
 
 main {
-    flex-grow: 1; 
+    flex-grow: 1;
     position: relative;
     overflow: hidden;
     background-color: #000;
@@ -70,11 +96,10 @@ main {
 .carru-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
 }
 
-/* Botones */
 .btn-nav {
     position: absolute; top: 50%; transform: translateY(-50%);
     background: rgba(0,0,0,0.3); color: white; border: none;
@@ -93,10 +118,10 @@ main {
 footer {
     background-color: #003366;
     color: white;
-    padding: 10px 0; 
+    padding: 10px 0;
     text-align: center;
     border-top: 3px solid #d4af37;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .frase-community { font-size: 0.9rem; font-style: italic; margin-bottom: 5px; }
@@ -104,17 +129,17 @@ footer {
 .redes-sociales img { width: 25px; height: 25px; filter: brightness(0) invert(1); }
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    backdrop-filter: blur(5px); 
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
 }
 
 .contenido-modal {
-    background-color: var(--color-blanco);
+    background-color: white;
     margin: 10% auto;
     padding: 30px;
     border-radius: 12px;
@@ -122,70 +147,181 @@ footer {
     text-align: center;
     position: relative;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+
+    /* --- NUEVAS LÍNEAS PARA SEPARAR BOTONES --- */
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; /* Esto crea el espacio exacto entre cada botón */
+}
+
+/* Para asegurar que los botones no se peguen al título */
+.contenido-modal h2 {
+    margin-bottom: 10px;
+}
+
+/* Estilo adicional por si quieres que el de registro se vea distinto (opcional) */
+#btnIrRegistro {
+    background-color: #f2edf6; /* Usando uno de tus colores de Roo+ si gustas */
+    color: #003366;
+    border: 1px solid #003366;
+}
+
+#btnIrRegistro:hover {
+    background-color: #d4af37;
+    color: white;
 }
 
 .cerrar-modal {
     position: absolute; right: 15px; top: 10px;
     font-size: 28px; cursor: pointer; color: #aaa;
 }
-
-.cerrar-modal:hover { color: var(--color-primario); }
+.cerrar-modal:hover { color: #003366; }
 
 .campo { text-align: left; margin-bottom: 15px; }
-.campo label { display: block; margin-bottom: 5px; color: var(--color-primario); font-weight: bold; }
+.campo label { display: block; margin-bottom: 5px; color: #003366; font-weight: bold; }
 .campo input {
     width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;
 }
 
 .btn-enviar {
     width: 100%; padding: 12px;
-    background-color: var(--color-primario);
+    background-color: #003366;
     color: white; border: none; border-radius: 5px;
     font-size: 1rem; cursor: pointer; transition: 0.3s;
 }
-.btn-enviar:hover { background-color: var(--color-secundario); color: var(--color-primario); }
+.btn-enviar:hover { background-color: #d4af37; color: #003366; }
 
-/*Estilo para Inicio_Privado*/
-.contenedor-maquetado {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 30px;
-    padding: 40px 5%;
-    flex: 1;
+/* =========================================
+   ESTILOS PÁGINA PRIVADA
+   ========================================= */
+
+body.pagina-privada {
+    background-color: #f4f7f6;
+    overflow: auto;
+    min-height: 100vh;
+    height: auto;
 }
 
-.tarjeta {
+body.pagina-privada main {
+    all: unset;
+    display: block;
+    background-color: #f4f7f6;
+    padding: 40px 5%;
+    flex-grow: 1;
+}
+
+.pagina-privada .contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.pagina-privada .columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pagina-privada .tarjeta {
     background: white;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    border-left: 5px solid var(--color-secundario); 
+    border-top: 4px solid #d4af37;
 }
 
-.img-uni {
+.pagina-privada .tarjeta h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.pagina-privada .tarjeta p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.pagina-privada .placeholder-img {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    background: #2ec4b6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+}
+
+.pagina-privada .tarjeta-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
     border-radius: 8px;
 }
 
-.pie-foto {
-    text-align: center;
-    font-size: 0.9rem;
+.pagina-privada .frase {
     margin-top: 10px;
-    color: #666;
-}
-
-.mapa-contenedor {
-    height: 350px;
-    padding: 10px;
-}
-
-.soporte h3 { color: var(--color-primario); margin-bottom: 10px; }
-
-.activo-link {
-    background: var(--color-secundario) !important;
-    color: var(--color-primario) !important;
+    font-style: italic;
     font-weight: bold;
+    color: #003366;
+}
+
+.pagina-privada .direccion {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-salir {
+    color: white;
+    text-decoration: none;
+    background-color: #d4af37;
+    color: #003366;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+.btn-salir:hover {
+    background-color: white;
+    color: #003366;
+}
+.footer-redes {
+    background: #001a33;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+}
+
+.footer-redes h4 {
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.redes-sociales a img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes-sociales a img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.5);
+}
+
+.footer-redes p {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }

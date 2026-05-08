@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Panel de Usuario</title>
     <link rel="stylesheet" href="estilo_privado.css">
+        <script src="modal.js"></script>
 </head>
 <body class="pagina-privada">
 
-    <header>
-        <div class="logo-area">
-            <h1>COMMUNITY COLLEGE</h1>
-            <p>OPORTUNIDADES DE ESTUDIO</p>
+ <header>
+    <div class="logo-area">
+        <h1><a href="index.html">COMMUNITY COLLAGE</a></h1>
+        <p>OPORTUNIDADES DE ESTUDIO</p>
+    </div>
+
+    <nav class="nav-principal">
+        <ul>
+            <li><a href="inicio_privado.php">Ubicacion Y Contacto</a></li>
+            <li><a href="requisitos.php">Requisitos</a></li>
+            <li><a href="fotos_testimonios.php">Fotos y Testimonios</a></li>
+            <li><a href="#">Trámites</a></li>
+        </ul>
+    </nav>
+
+    <div class="usuario-area">
+        <span class="icon-graduacion">🎓</span>
+        <div class="auth-links">
+            <a href="#" class="btn-login">Contáctanos</a>
         </div>
-        <nav class="nav-principal">
-            <ul>
-                <li><a href="#" class="activo-link">Inicio</a></li>
-                <li><a href="#">Requisitos</a></li>
-                <li><a href="#">Fotos y Testimonios</a></li>
-                <li><a href="#">Trámites</a></li>
-            </ul>
-        </nav>
-        <div class="usuario-area">
-            <span class="icon-graduacion">🎓</span>
-            <div class="auth-links">
-                <a href="index.html">Cerrar Sesión</a>
-            </div>
-        </div>
-    </header>
+    </div>
+</header>
+<!-- ------------------------------------------------------->
 
     <main class="contenedor-maquetado">
         <!-- COLUMNA IZQUIERDA: Imagen + Tarjeta Info -->
@@ -72,17 +76,36 @@
             </div>
         </div>
     </main>
+        <footer class="footer-redes">
 
-    <footer>
         <div class="contenedor-footer">
-            <p class="frase-community">"Forjando el camino hacia el éxito académico y profesional."</p>
-            <div class="redes-sociales">
-                <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg" alt="FB"></a>
-                <a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn"></a>
-                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_original.svg" alt="X"></a>
-            </div>
-        </div>
-    </footer>
 
+            <p class="frase-community">
+                "Forjando el camino hacia el éxito académico y profesional."
+            </p>
+
+            <h4>Síguenos en redes sociales</h4>
+
+             <div class="redes-sociales">
+
+    <a href="https://www.facebook.com/epccnews/#" target="_blank">
+        <img src="imgs/iconoFcebook.avif" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/epccnews" target="_blank">
+        <img src="imgs/iconoInstagram.webp" alt="Instagram">
+    </a>
+
+    <a href="https://x.com/EPCCNews" target="_blank">
+        <img src="imgs/iconoX.avif" alt="X">
+    </a>
+
+</div>
+
+            <p class="copy-footer">© 2026 Community College</p>
+
+        </div>
+
+    </footer>
 </body>
 </html>
