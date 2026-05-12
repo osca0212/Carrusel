@@ -1,11 +1,8 @@
 :root {
 
     --color-primario: #003366;
-
     --color-secundario: #d4af37;
-
     --color-blanco: #ffffff;
-
     --color-texto: #333333;
 
 }
@@ -17,9 +14,7 @@
 * {
 
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
 
 }
@@ -29,7 +24,6 @@
 html, body {
 
     width: 100%;
-
     min-height: 100%;
 
 }
@@ -39,15 +33,10 @@ html, body {
 body.pagina-privada {
 
     display: flex;
-
     flex-direction: column;
-
     min-height: 100vh;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     background: linear-gradient(135deg, #003366 0%, #001a33 100%);
-
     color: var(--color-texto);
 
 }
@@ -59,19 +48,12 @@ body.pagina-privada {
 header {
 
     background: var(--color-primario);
-
     color: white;
-
     padding: 18px 5%;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 20px;
-
     flex-wrap: wrap;
 
     box-shadow: 0 4px 14px rgba(0,0,0,0.25);
@@ -83,7 +65,6 @@ header {
 .logo-area h1 a {
 
     text-decoration: none;
-
     color: inherit;
 
 }
@@ -93,11 +74,8 @@ header {
 .logo-area p {
 
     font-size: 0.75rem;
-
     color: rgba(255,255,255,0.85);
-
     letter-spacing: 0.5px;
-
     margin-top: 3px;
 
 }
@@ -107,11 +85,8 @@ header {
 .nav-principal ul {
 
     list-style: none;
-
     display: flex;
-
     gap: 10px;
-
     flex-wrap: wrap;
 
 }
@@ -121,15 +96,10 @@ header {
 .nav-principal a {
 
     color: white;
-
     text-decoration: none;
-
     padding: 10px 14px;
-
     border-radius: 8px;
-
     font-size: 0.92rem;
-
     transition: 0.3s ease;
 
 }
@@ -139,7 +109,6 @@ header {
 .nav-principal a:hover {
 
     background: var(--color-secundario);
-
     color: var(--color-primario);
 
 }
@@ -459,6 +428,7 @@ main.contenedor-requisitos {
     padding: 25px 15px;
 
     margin-top: 30px;
+border-top: 2px solid var(--color-secundario); /* <--- ESTA ES LA LÍNEA AMARILLA */
 
 }
 

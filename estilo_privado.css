@@ -415,14 +415,11 @@ main.contenedor-maquetado {
 .footer-redes {
 
     background: #001a33;
-
     color: white;
-
     text-align: center;
-
     padding: 25px 15px;
-
     margin-top: 30px;
+    border-top: 2px solid var(--color-secundario); 
 
 }
 
@@ -431,9 +428,7 @@ main.contenedor-maquetado {
 .footer-redes h4 {
 
     margin-bottom: 15px;
-
     color: var(--color-secundario);
-
     font-size: 1.1rem;
 
 }
@@ -443,11 +438,8 @@ main.contenedor-maquetado {
 .redes-sociales {
 
     display: flex;
-
     justify-content: center;
-
     gap: 25px;
-
     margin-bottom: 15px;
 
 }
@@ -457,13 +449,9 @@ main.contenedor-maquetado {
 .redes-sociales a img {
 
     width: 45px;
-
     height: 45px;
-
     object-fit: contain;
-
     border-radius: 50%;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
@@ -473,7 +461,6 @@ main.contenedor-maquetado {
 .redes-sociales a img:hover {
 
     transform: translateY(-8px);
-
     box-shadow: 0 8px 15px rgba(212, 175, 55, 0.5);
 
 }
@@ -483,7 +470,6 @@ main.contenedor-maquetado {
 .footer-redes p {
 
     font-size: 0.85rem;
-
     opacity: 0.8;
 
 }
@@ -495,10 +481,8 @@ main.contenedor-maquetado {
 @media (max-width: 900px) {
 
     main.contenedor-maquetado {
-
-        grid-template-columns: 1fr;
-
-        padding: 35px 5%;
+    grid-template-columns: 1fr;
+    padding: 35px 5%;
 
     }
 
@@ -512,34 +496,24 @@ main.contenedor-maquetado {
 
 }
 
-
-
 @media (max-width: 600px) {
 
     header {
 
         flex-direction: column;
-
         text-align: center;
-
         gap: 15px;
 
     }
 
-
-
     .nav-principal ul {
 
         justify-content: center;
-
         flex-wrap: wrap;
 
     }
 
-
-
     .tarjeta-mini {
-
         width: 100%;
 
     }
@@ -547,7 +521,6 @@ main.contenedor-maquetado {
 
 
     .logo-area h1 {
-
         font-size: 1.25rem;
 
     }
@@ -560,95 +533,30 @@ main.contenedor-maquetado {
 
 .modal {
 
-
-
     display: none;
-
-
-
     position: fixed;
-
-
-
     z-index: 1000;
-
-
-
     left: 0; top: 0;
-
-
-
     width: 100%; height: 100%;
-
-
-
     background-color: rgba(0, 0, 0, 0.7);
-
-
-
     backdrop-filter: blur(5px);
-
-
 
 }
 
 
-
-
-
-
-
 .contenido-modal {
 
-
-
     background-color: white;
-
-
-
     margin: 10% auto;
-
-
-
     padding: 30px;
-
-
-
     border-radius: 12px;
-
-
-
     width: 350px;
-
-
-
     text-align: center;
-
-
-
     position: relative;
-
-
-
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-
-
-
-
-
-
-
     display: flex; 
-
-
-
     flex-direction: column; 
-
-
-
     gap: 15px; 
-
-
 
 }
 
@@ -659,36 +567,15 @@ main.contenedor-maquetado {
 
 
 .contenido-modal h2 {
-
-
-
     margin-bottom: 10px;
-
-
-
 }
 
 
-
-
-
-
-
 #btnIrRegistro {
-
-
-
+        
     background-color: #f2edf6;
-
-
-
     color: #003366;
-
-
-
     border: 1px solid #003366;
-
-
 
 }
 
@@ -700,32 +587,15 @@ main.contenedor-maquetado {
 
 #btnIrRegistro:hover {
 
-
-
     background-color: #d4af37;
-
-
-
     color: white;
-
-
 
 }
 
 
-
-
-
-
-
 .cerrar-modal {
-
-
-
+        
     position: absolute; right: 15px; top: 10px;
-
-
-
     font-size: 28px; cursor: pointer; color: #aaa;
 
 
@@ -736,52 +606,23 @@ main.contenedor-maquetado {
 
 .cerrar-modal:hover { 
 
-
-
         color: #003366; 
-
-
 
 }
 
-
-
-
-
-
-
 .campo { 
 
-
-
         text-align: left; 
-
-
-
         margin-bottom: 15px; 
-
-
-
 }
 
 
 
 .campo label { 
 
-
-
         display: block; 
-
-
-
         margin-bottom: 5px; 
-
-
-
         color: #003366; 
-
-
-
         font-weight: bold; 
 
 
@@ -792,20 +633,9 @@ main.contenedor-maquetado {
 
 .campo input {
 
-
-
     width: 100%; 
-
-
-
         padding: 10px; 
-
-
-
         border: 1px solid #ccc; 
-
-
-
         border-radius: 5px;
 
 
@@ -819,42 +649,22 @@ main.contenedor-maquetado {
 
 
 .btn-enviar {
-
-
-
     width: 100%; padding: 12px;
-
-
-
     background-color: #003366;
-
-
-
     color: white; border: none; border-radius: 5px;
-
-
-
     font-size: 1rem; cursor: pointer; transition: 0.3s;
 
 
 
 }
 
-
-
 .btn-enviar:hover { 
 
-
-
         background-color: #d4af37; 
-
-
-
-        color: #003366; 
-
-
+        color: #003366;
 
 }
+
 
 .contenedor-footer-final {
     display: grid;

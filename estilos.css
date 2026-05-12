@@ -281,36 +281,20 @@ footer {
 .contenido-modal {
 
     background-color: white;
-
     margin: 10% auto;
-
     padding: 30px;
-
     border-radius: 12px;
-
     width: 350px;
-
     text-align: center;
-
     position: relative;
-
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-
-
-
-    /* --- NUEVAS LÍNEAS PARA SEPARAR BOTONES --- */
-
     display: flex; 
-
     flex-direction: column; 
-
-    gap: 15px; /* Esto crea el espacio exacto entre cada botón */
-
+    gap: 15px; /
 }
 
 
 
-/* Para asegurar que los botones no se peguen al título */
 
 .contenido-modal h2 {
 
@@ -320,14 +304,11 @@ footer {
 
 
 
-/* Estilo adicional por si quieres que el de registro se vea distinto (opcional) */
 
 #btnIrRegistro {
 
-    background-color: #f2edf6; /* Usando uno de tus colores de Roo+ si gustas */
-
+    background-color: #f2edf6; 
     color: #003366;
-
     border: 1px solid #003366;
 
 }
@@ -337,7 +318,6 @@ footer {
 #btnIrRegistro:hover {
 
     background-color: #d4af37;
-
     color: white;
 
 }
@@ -347,7 +327,6 @@ footer {
 .cerrar-modal {
 
     position: absolute; right: 15px; top: 10px;
-
     font-size: 28px; cursor: pointer; color: #aaa;
 
 }
@@ -357,11 +336,8 @@ footer {
 
 
 .campo { text-align: left; margin-bottom: 15px; }
-
 .campo label { display: block; margin-bottom: 5px; color: #003366; font-weight: bold; }
-
 .campo input {
-
     width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;
 
 }
@@ -371,11 +347,8 @@ footer {
 .btn-enviar {
 
     width: 100%; padding: 12px;
-
     background-color: #003366;
-
     color: white; border: none; border-radius: 5px;
-
     font-size: 1rem; cursor: pointer; transition: 0.3s;
 
 }
@@ -395,11 +368,8 @@ footer {
 body.pagina-privada {
 
     background-color: #f4f7f6;
-
     overflow: auto;
-
     min-height: 100vh;
-
     height: auto;
 
 }
@@ -409,13 +379,9 @@ body.pagina-privada {
 body.pagina-privada main {
 
     all: unset;
-
     display: block;
-
     background-color: #f4f7f6;
-
     padding: 40px 5%;
-
     flex-grow: 1;
 
 }
@@ -425,9 +391,7 @@ body.pagina-privada main {
 .pagina-privada .contenedor-grid {
 
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 30px;
 
 }
@@ -437,9 +401,7 @@ body.pagina-privada main {
 .pagina-privada .columna {
 
     display: flex;
-
     flex-direction: column;
-
     gap: 20px;
 
 }
@@ -449,13 +411,9 @@ body.pagina-privada main {
 .pagina-privada .tarjeta {
 
     background: white;
-
     border-radius: 12px;
-
     padding: 20px;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
     border-top: 4px solid #d4af37;
 
 }
@@ -465,7 +423,6 @@ body.pagina-privada main {
 .pagina-privada .tarjeta h3 {
 
     margin-bottom: 10px;
-
     color: #003366;
 
 }
@@ -475,7 +432,6 @@ body.pagina-privada main {
 .pagina-privada .tarjeta p {
 
     color: #555;
-
     line-height: 1.5;
 
 }
@@ -485,21 +441,13 @@ body.pagina-privada main {
 .pagina-privada .placeholder-img {
 
     width: 100%;
-
     height: 250px;
-
     background: #2ec4b6;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-weight: bold;
-
     border-radius: 8px;
-
     color: white;
 
 }
@@ -509,13 +457,9 @@ body.pagina-privada main {
 .pagina-privada .tarjeta-mapa iframe {
 
     display: block;
-
     width: 100%;
-
     height: 300px;
-
     border: 0;
-
     border-radius: 8px;
 
 }
@@ -525,11 +469,8 @@ body.pagina-privada main {
 .pagina-privada .frase {
 
     margin-top: 10px;
-
     font-style: italic;
-
     font-weight: bold;
-
     color: #003366;
 
 }
@@ -539,7 +480,6 @@ body.pagina-privada main {
 .pagina-privada .direccion {
 
     margin-top: 10px;
-
     font-weight: bold;
 
 }
@@ -549,21 +489,13 @@ body.pagina-privada main {
 .btn-salir {
 
     color: white;
-
     text-decoration: none;
-
     background-color: #d4af37;
-
     color: #003366;
-
     padding: 8px 14px;
-
     border-radius: 6px;
-
     font-weight: bold;
-
     font-size: 0.85rem;
-
     transition: 0.3s;
 
 }
@@ -571,7 +503,6 @@ body.pagina-privada main {
 .btn-salir:hover {
 
     background-color: white;
-
     color: #003366;
 
 }
@@ -579,14 +510,12 @@ body.pagina-privada main {
 .footer-redes {
 
     background: #001a33;
-
     color: white;
-
     text-align: center;
-
     padding: 25px 15px;
-
     margin-top: 30px;
+    border-top: 2px solid var(--color-secundario);
+
 
 }
 
@@ -595,9 +524,7 @@ body.pagina-privada main {
 .footer-redes h4 {
 
     margin-bottom: 15px;
-
     color: var(--color-secundario);
-
     font-size: 1.1rem;
 
 }
@@ -607,11 +534,8 @@ body.pagina-privada main {
 .redes-sociales {
 
     display: flex;
-
     justify-content: center;
-
     gap: 25px;
-
     margin-bottom: 15px;
 
 }
@@ -621,13 +545,9 @@ body.pagina-privada main {
 .redes-sociales a img {
 
     width: 45px;
-
     height: 45px;
-
     object-fit: contain;
-
     border-radius: 50%;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
@@ -637,7 +557,6 @@ body.pagina-privada main {
 .redes-sociales a img:hover {
 
     transform: translateY(-8px);
-
     box-shadow: 0 8px 15px rgba(212, 175, 55, 0.5);
 
 }
@@ -647,7 +566,6 @@ body.pagina-privada main {
 .footer-redes p {
 
     font-size: 0.85rem;
-
     opacity: 0.8;
 
 }

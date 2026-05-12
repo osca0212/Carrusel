@@ -34,23 +34,38 @@ const alumnos = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+
     const tarjetas = document.querySelectorAll(".tarjeta-alumno");
 
-    tarjetas.forEach(tarjeta => {
+    tarjetas.forEach((tarjeta, index) => {
+
+        if(index === 0){
+            tarjeta.classList.add("tarjeta-activa");
+        }
+
         tarjeta.addEventListener("click", () => {
-            const index = tarjeta.getAttribute("data-index");
-            mostrarAlumno(index);
+
+            tarjetas.forEach(t => t.classList.remove("tarjeta-activa"));
+
+            tarjeta.classList.add("tarjeta-activa");
+
+            const indexAlumno = tarjeta.getAttribute("data-index");
+
+            mostrarAlumno(indexAlumno);
         });
     });
 });
 
 function mostrarAlumno(index) {
+
     const alumno = alumnos[index];
 
     const img = document.getElementById("imagen-grande");
+
     const info = document.getElementById("info-alumno");
 
     img.classList.add("fade-out");
+
     info.classList.add("fade-out");
 
     setTimeout(() => {
@@ -59,21 +74,30 @@ function mostrarAlumno(index) {
 
         info.innerHTML = `
             <h3>${alumno.nombre}</h3>
+
             <p><strong>Universidad:</strong> ${alumno.uni}</p>
+
             <p><strong>Carrera:</strong> ${alumno.carrera}</p>
+
             <p><strong>Tiempo:</strong> ${alumno.tiempo}</p>
+
             <p class="testimonio">${alumno.testimonio}</p>
         `;
 
         img.classList.remove("fade-out");
+
         info.classList.remove("fade-out");
 
         img.classList.add("fade-in");
+
         info.classList.add("fade-in");
 
         setTimeout(() => {
+
             img.classList.remove("fade-in");
+
             info.classList.remove("fade-in");
+
         }, 350);
 
     }, 250);
