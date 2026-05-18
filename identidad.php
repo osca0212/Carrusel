@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identidad - Community College</title>
-    <!-- v=1.9 para refrescar los cambios de centrado -->
-    <link rel="stylesheet" href="estilo_testimonios.css?v=1.9">
+    <link rel="stylesheet" href="estilo_identidad.css?v=1.1">
 </head>
 <body class="pagina-privada">
 
@@ -27,24 +26,23 @@
     <div class="usuario-area">
         <span class="icon-graduacion">🎓</span>
         <div class="auth-links">
-            <a href="#" class="btn-login">Contáctanos</a>
+            <!-- Botón de contacto ajustado -->
+            <a href="javascript:void(0)" class="btn-login" id="abrir-contacto">Contáctanos</a>
         </div>
     </div>
 </header>
 
 <main class="contenedor-identidad">
     <div class="layout-identidad">
-        
-        <!-- Contenedor centrado entre la pared izquierda y la imagen -->
-        <div class="lado-frases">
-            <div class="envoltorio-maquina">
-                <h2 id="maquina-escribir"></h2><span class="cursor">|</span>
-            </div>
-        </div>
-
         <div class="lado-credencial">
             <div class="contenedor-foto-identidad">
                 <img src="imgs/identidad.jpeg" alt="Identidad" class="imagen-agrandar">
+            </div>
+        </div>
+
+        <div class="lado-frases">
+            <div class="envoltorio-maquina">
+                <h2 id="maquina-escribir"></h2><span class="cursor">|</span>
             </div>
         </div>
 
@@ -55,9 +53,16 @@
             <div class="cuadro-color color-oscuro"><div class="info-hover"><p>Azul Oscuro</p><span>#001a33</span></div></div>
         </div>
 
+        <div class="seccion-sitemap">
+            <h3>Sitemap del sitio</h3>
+            <div class="contenedor-sitemap">
+                <img src="imgs/sitemap.jpeg" alt="Sitemap Community College" class="imagen-sitemap">
+            </div>
+        </div>
     </div>
 </main>
 
+<!-- Footer más pequeño y compacto (Estilo Trámites) -->
 <footer class="footer-redes">
     <div class="contenedor-footer-final">
         <div class="espaciador-footer"></div>
@@ -82,27 +87,18 @@
 <script>
 const textoElemento = document.getElementById('maquina-escribir');
 const frases = [
-    "Cree en ti mismo.",
-    "El éxito es la suma de pequeños esfuerzos.",
-    "Tu futuro empieza hoy.",
-    "La disciplina vence al talento.",
-    "No te detengas hasta estar orgulloso.",
-    "Haz que suceda.",
-    "La educación es tu pasaporte al mundo.",
-    "Sueña en grande, trabaja duro.",
-    "Cada paso cuenta.",
-    "Tú eres capaz de cosas increíbles.",
-    "Supera tus propios límites.",
-    "El conocimiento es poder."
+    "Cree en ti mismo.", "El éxito es la suma de pequeños esfuerzos.",
+    "Tu futuro empieza hoy.", "La disciplina vence al talento.",
+    "No te detengas hasta estar orgulloso.", "Haz que suceda.",
+    "La educación es tu pasaporte al mundo.", "Sueña en grande, trabaja duro.",
+    "Cada paso cuenta.", "Tú eres capaz de cosas increíbles.",
+    "Supera tus propios límites.", "El conocimiento es poder."
 ];
 
-let fraseIndex = 0;
-let charIndex = 0;
-let borrando = false;
+let fraseIndex = 0; let charIndex = 0; let borrando = false;
 
 function animarTexto() {
     const fraseActual = frases[fraseIndex];
-    
     if (borrando) {
         textoElemento.textContent = fraseActual.substring(0, charIndex - 1);
         charIndex--;
@@ -110,23 +106,15 @@ function animarTexto() {
         textoElemento.textContent = fraseActual.substring(0, charIndex + 1);
         charIndex++;
     }
-
     let velocidad = borrando ? 50 : 100;
-
     if (!borrando && charIndex === fraseActual.length) {
-        velocidad = 2000;
-        borrando = true;
+        velocidad = 2000; borrando = true;
     } else if (borrando && charIndex === 0) {
-        borrando = false;
-        fraseIndex = (fraseIndex + 1) % frases.length;
-        velocidad = 500;
+        borrando = false; fraseIndex = (fraseIndex + 1) % frases.length; velocidad = 500;
     }
-
     setTimeout(animarTexto, velocidad);
 }
-
 document.addEventListener('DOMContentLoaded', animarTexto);
 </script>
-
 </body>
 </html>

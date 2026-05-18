@@ -62,15 +62,7 @@
             
             <div class="tarjeta mapa-contenedor">
                 <h4>Ubicación en el Mapa</h4>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.8997755366144!2d-106.37599492341!3d31.74825997416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75913a7b7b6b1%3A0x7f1c4b4b4b4b4b4b!2sEl%20Paso%20Community%20College%20Valle%20Verde%20Campus!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0; border-radius: 8px;" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.67130069071!2d-106.37237152377757!3d31.752171835652135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75b180ef2a71b%3A0xb37b3b304c954479!2sEl%20Paso%20Community%20College%20-%20Valle%20Verde%20Campus!5e0!3m2!1ses-419!2smx!4v1778688156060!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </main>
